@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Jacob Brouwer's Resume</title>
+    <meta name="author" content="Jacob Brouwer" />
+    <meta name="subject" content="The resume of Senior Software Engineer focused on Functional Programming in Scala" />
+    <meta name="keywords" content="scala,cats,functional programming" />
+    <style>
+@media print {
+  @page {
+    margin: 0.4in 0.6in 0.4in 0.6in;
+  }
+  .page {
+    page-break-before: always;
+  }
+  size: letter;
+}
+
+@media screen {
+  body {
+    padding: 0.45in 0.6in 0.45in 0.6in;
+    margin: auto;
+    width: 8.5in;
+  }
+}
+
+body {
+  font-family: Nimbus Sans, monospace;
+  font-size: 0.85em;
+}
+
+address {
+  display: flex;
+  font-style: normal;
+  gap: 0.2in;
+  justify-content: center;
+  text-align: center;
+  width: auto;
+}
+
+.job {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.2in;
+}
+
+.experience {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.075in;
+}
+
+.summary {
+  width: 49%;
+}
+
+.detail {
+  width: 51%;
+}
+
+.abbreviated {
+  margin-top: 0.075in;
+}
+
+.code {
+  font-family: Hasklug Nerd Font, serif;
+}
+
+h1 {
+  font-size: 2em;
+  font-style: normal;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  color: #BF5700;
+  font-size: 1.5em;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0.2in 0 0.1in 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  &::before, &::after {
+    position: absolute;
+    top: 40%;
+    overflow: hidden;
+    width: 50%;
+    height: 1px;
+    content: '\a0';
+    background-color: #555;
+  }
+  &::before {
+    margin-left: -51%;
+    text-align: right;
+  }
+  &::after {
+    margin-left: 1%;
+  }
+}
+
+h3 {
+  display: inline;
+  font-size: 1.1em;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0;
+}
+
+h4 {
+  display: inline;
+  font-size: 0.95em;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0;
+}
+
+.langs {
+  display: inline;
+  font-size: 0.9em;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0;
+  color: #BF5700;
+}
+
+.normal {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #BF5700;;
+  text-decoration: underline;
+}
+
+ul {
+  margin: 0 0.1in 0 0.15in;
+  padding-left: 1ch;
+}
+
+li {
+  list-style-type: "»";
+  padding-inline-start: 1ch;
+  padding-left: 0.29in;
+  text-indent: -0.2in;
+}
+
+li::marker {
+  color: #BF5700;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0.1in;
+}
+
+p {
+  margin: 0 0 0 0.15in;
+  text-indent: 0.15in;
+}
+
+div {
+}
+
+footer {
+  bottom: 0;
+  font-size: 0.6em;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 99vh;
+  justify-content: space-between;
+}
+
+.intro {
+  font-style: italic;
+  font-weight: lighter;
+  margin: 0.2in 0.2in 0 0.2in;
+  text-align: center;
+    font-size: 0.9em;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div>
+        <address>
+          <div>
+            <h1><br /></h1>
+            <a href="https://jabrouwer82.github.io">jabrouwer82.github.io</a><br />
+          </div>
+          <div>
+        <h1>
+          Jacob Brouwer
+        </h1>
+            <a href="https://linkedin.com/in/jabrouwer82">linkedin.com/in/jabrouwer82</a><br />
+          </div>
+          <div>
+            <h1><br /></h1>
+            <a href="https://github.com/jabrouwer82">github.com/jabrouwer82</a><br />
+          </div>
+        </address>
+        <p class="intro">I am a backend Scala functional programmer, experienced with popular ecosystems for RESTful, streaming, and distributed applications from Akka, Play, and Spark to ZIO and my personal favorite, Typelevel, built on databases, data lakes, and streaming engines including Postgres, Kafka, Cassandra, and S3. I have enjoyed digging deeper into the Scala and sbt ecosystem by contributing macros to open source libraries and writing a sbt plugins.</p>
+        <div>
+        <h2>Experience</h2>
+        </div>
+        <div class="job">
+          <div><h3>Software Engineer <span class="normal">at</span> Travel Syndication Technology</h3></div>
+          <span class="langs">[Scala]</span>
+          <span>August 2024 - January 2025</span>
+        </div>
+        <p class="abbreviated">I was a backend Scala engineer helping modernize the hotel API servers and ETL jobs by integrating with Typelevel libraries like Cats Effect and Monix Newtypes, integrating with updated vendor APIs and data sources, and participating in an on-call rotation.</p>
+        <div  class="job">
+          <div><h3>Senior Software Engineer <span class="normal">at</span> Capital One <span class="normal">via</span> Kunaico</h3></div>
+          <span class="langs">[Scala]</span>
+          <span>September 2021 - August 2024</span>
+        </div>
+        <div class="experience">
+          <p class="summary">I was backend Scala engineer and local sbt expert. I built and maintained two Scala ZIO services: the first transformed external commands into internal service formats and orchestrated messages to internal services; the second asynchronously processed delayed commands using Kafka and ZIO Streams.</p>
+          <ul class="detail">
+            <li>Guided migrations to Scala 3 and ZIO 2.x.</li>
+            <li>Wrote an sbt plugin that integrates a custom OpenAPI generator to generate case classes.</li>
+            <li>Co-built APIs with OpenAPI, tapir and ZIO Http, with generative ZIO and Golang tests.</li>
+            <li>Aided transitioning from NewRelic to OpenTelemetry.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div><h3>Senior Software Engineer <span class="normal">at</span> HEB</h3></div>
+          <span class="langs">[Scala, SQL, Bash]</span>
+          <span>September 2020 - September 2021</span>
+        </div>
+        <div class="experience">
+          <p class="summary">I was a backend Scala engineer and Scala/sbt expert. I helped to modernize Scala microservices and Spark Promotional Forecasting ETL jobs, as well as various operational tasks to help improve reliability and testability.</p>
+          <ul class="detail">
+            <li>Orchestrated Spark upgrade from 2.4.5 to 3.0.1.</li>
+            <li>Implemented caching and improved reliability of Gitlab CI and deployment pipelines.</li>
+            <li>Augmented on-call duties with Ammonite scripts using Doobie and Cats Effect.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div><h3>Software Engineer III <span class="normal">at</span> SparkCognition</h3></div>
+          <span class="langs">[Scala, Python, SQL, Bash]</span>
+          <span>August 2019 - September 2020</span>
+        </div>
+        <div class="experience">
+          <p class="summary">I was a backend Scala engineer and Scala "expert". I was a part of two different teams: the first built infrastructure for a company-wide Datalake and ETL paradigm as well as Scala functional programming libraries built with Typelevel tools like Cats Effect and http4s; the second was a product team where I aided a migration from monolith to microservices, an upgrade from Scala 2.11 to 2.12, and advocated functional programming practices.</p>
+          <ul class="detail">
+            <li>Taught a introductory Scala course to beginners!</li>
+            <li>Supported conversion of a monolith ML runner and data analysis application to microservices.</li>
+            <li>Co-architected and built a Datalake and ETL solution with Alluxio and Scio/Apache Beam.</li>
+            <li>Developed an Event Sourced application for declaring and scheduling Scio/Beam jobs.</li>
+            <li>Maintained Scala libraries intended to standardize use of third-party tools across the company.</li>
+          </ul>
+        </div>
+        <div class="job">
+          <div><h3>Software Engineer <span class="normal">at</span> MinuteKEY</h3></div>
+          <span class="langs">[Scala, Python, TypeScript, SQL, Bash]</span>
+          <span>June 2017 - July 2019</span>
+        </div>
+        <div class="experience">
+          <p class="summary">I was a full-stack engineer working on Scala backend and TypeScript front ends. I wore a variety of hats, but a large portion of my work involved managing the kiosk payment systems, helping rewrite the kiosk UI, working towards ADA certification for the kiosk UI, and on-call duties.</p>
+          <ul class="detail">
+            <li>Fixed a faulty card reader integration with a several hundred thousand dollar revenue impact.</li>
+            <li>Productionized ML models and managed our transition from Caffe to Tensorflow.</li>
+            <li>Developed a new kiosk UI from the ground up with ES2018 and Web Components.</li>
+            <li>Implemented a kiosk screen reader with local text-to-speech, a chrome extension, and PulseAudio.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <div>
+        <h2>Open Source</h2>
+        <ul>
+          <li><h3><a href="https://github.com/scalameta/nvim-metals">scalameta/nvim-metals</a></h3>: I implemented support for attaching nvim-metals to a remote debugger. (2024)</li>
+          <li><h3><a href="https://github.com/monix/newtypes">monix/newtypes</a></h3>: I wrote the original implementation of <span class="code">Newsubtype</span>. (2021)</li>
+          <li><h3><a href="https://github.com/slick/slick">slick/slick</a></h3>: I fixed the <span class="code">mapTo</span> macro for case classes with hand-written companion objects. (2020)</li>
+          <li><h3><a href="https://github.com/com-lihaoyi/Ammonite">com-lihaoyi/Ammonite</a></h3>: I fixed out of date documentation related to the Coursier api. (2020)</li>
+        </ul>
+        <h2>Technical Proficiencies</h2>
+        <ul>
+          <li><h3>Languages</h3>:</li>
+            <ul>
+              <li><h4>Advanced</h4>: Scala</li>
+              <li><h4>Proficient</h4>: Zsh/Bash, SQL, TypeScript, Python</li>
+              <li><h4>Familiar</h4>: Java, Go, Vim script, Neovim Lua</li>
+              <li><h4>Learning</h4>: Haskell, Idris, F#</li>
+            </ul>
+          <li><h3>Technologies</h3>:</li>
+          <ul>
+            <li><h4>Typelevel</h4>: Cats, Cats Effect, Circe, Doobie, Fs2, http4s, Refined, Shapeless, Simulacrum, Specs2</li>
+            <li><h4>Scala</h4>: Akka, Play, Quill, sbt, Scalafmt, Scalastyle, Slick, Tapir, ZIO</li>
+            <li><h4>Databases</h4>: Cassandra, Cosmos DB, H2, Oracle, PostgreSQL, Redis, SQL Server</li>
+            <li><h4>Streams</h4>: Beam, Kafka, Pulsar, Scio, Spark</li>
+            <li><h4>Misc</h4>: AWS, Avro, Azure, Databricks, Docker, GCP, Git, NewRelic, OpenAPI, Protobuf, Splunk, Vim</li>
+          </ul>
+        </ul>
+        <h2>Experience Continued</h2>
+        <div class="job">
+          <div><h3>Software Engineer <span class="normal">at</span> Google</h3></div>
+          <span class="langs">[Java, Python, TypeScript, SQL]</span>
+          <span>June 2015 - July 2016</span>
+        </div>
+        <p class="abbreviated">I was a full-stack java engineer migrating legacy Python and Javascript apps to Java and TypeScript and maintaining MapReduce ETL jobs.</p>
+        <div class="job">
+          <div><h3>Software Engineering Intern <span class="normal">at</span> Google</h3></div>
+          <span class="langs">[Java, Python, Javascript]</span>
+          <span>Summers of 2012, 2013, and 2014</span>
+        </div>
+        <p class="abbreviated">I contributed automated Android UI tests for Play Books, a content matching feature for Play for Education, and a trending topics proof-of-concept app for Newsstand.
+          <h2>Education</h2>
+          <h3>The University of Texas at Austin</h3> <span class="langs">[2010-2015]</span>
+          <ul>
+            <li>Major in Computer Science</li>
+            <li>Major in Mathematics with a focus in Statistics, Probability, and Data Analysis</li>
+            <li>Minor in Linguistics</li>
+          </ul>
+      </div>
+      <footer>This document was made entirely in HTML and CSS with open source tools!</footer>
+    </div>
+  </body>
+</html>
