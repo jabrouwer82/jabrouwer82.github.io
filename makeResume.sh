@@ -7,5 +7,5 @@ chromium \
    --disable-gpu \
    --run-all-compositor-stages-before-draw \
    --no-pdf-header-footer \
-   --print-to-pdf=pdf/JacobBrouwerResume$year$month.pdf \
-   JacobBrouwerResume.html
+   --print-to-pdf="pdf/JacobBrouwerResume$year$month.pdf" \
+   index.html
