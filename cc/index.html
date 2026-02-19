@@ -52,19 +52,30 @@
   <script>
     const booleanParams = new Set(["override", "monetized"]);
     const paramDefs = [
+      ["override", "Override"],
+      ["monetized", "Monetized"],
       ["supplySubAccountName", "Supply Sub Account Name"],
       ["supplySubAccountUuid", "Supply Sub Account UUID"],
       ["demandSubAccountUuid", "Demand Sub Account UUID"],
       ["leadUuid", "Lead UUID"],
       ["companyUuid", "Company UUID"],
-      ["override", "Override"],
-      ["monetized", "Monetized"],
     ];
 
     const params = new URLSearchParams(window.location.search);
     const tbody = document.getElementById("params");
 
+    const present = [];
+    const missing = [];
+
     paramDefs.forEach(([key, label]) => {
+      if (params.get(key) !== null) {
+        present.push([key, label]);
+      } else {
+        missing.push([key, label]);
+      }
+    });
+
+    present.concat(missing).forEach(([key, label]) => {
       const raw = params.get(key);
       const tr = document.createElement("tr");
       const tdKey = document.createElement("td");
