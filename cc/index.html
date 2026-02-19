@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CC Parameters</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #333;
+      background: #fafafa;
+    }
+    h1 {
+      margin-bottom: 24px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #f0f0f0;
+    }
+    .indicator {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+    .green { background: #22c55e; }
+    .red { background: #ef4444; }
+    .empty { color: #999; font-style: italic; }
+  </style>
+</head>
+<body>
+  <h1>CC Parameters</h1>
+  <table>
+    <thead>
+      <tr><th>Parameter</th><th>Value</th></tr>
+    </thead>
+    <tbody id="params"></tbody>
+  </table>
+  <script>
+    const booleanParams = new Set(["override", "monetized"]);
+    const paramDefs = [
+      ["supplySubAccountName", "Supply Sub Account Name"],
+      ["supplySubAccountUuid", "Supply Sub Account UUID"],
+      ["demandSubAccountUuid", "Demand Sub Account UUID"],
+      ["leadUuid", "Lead UUID"],
+      ["companyUuid", "Company UUID"],
+      ["override", "Override"],
+      ["monetized", "Monetized"],
+    ];
+
+    const params = new URLSearchParams(window.location.search);
+    const tbody = document.getElementById("params");
+
+    paramDefs.forEach(([key, label]) => {
+      const raw = params.get(key);
+      const tr = document.createElement("tr");
+      const tdKey = document.createElement("td");
+      const tdVal = document.createElement("td");
+
+      tdKey.textContent = label;
+
+      if (raw === null) {
+        tdVal.classList.add("empty");
+        tdVal.textContent = "(not provided)";
+      } else if (booleanParams.has(key)) {
+        const isTrue = raw.toLowerCase() === "true";
+        const dot = document.createElement("span");
+        dot.className = "indicator " + (isTrue ? "green" : "red");
+        tdVal.appendChild(dot);
+        tdVal.appendChild(document.createTextNode(raw));
+      } else {
+        tdVal.textContent = raw;
+      }
+
+      tr.appendChild(tdKey);
+      tr.appendChild(tdVal);
+      tbody.appendChild(tr);
+    });
+  </script>
+</body>
+</html>
